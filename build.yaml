@@ -20,6 +20,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: test_1
-
-
+    shield: boardsource3x4

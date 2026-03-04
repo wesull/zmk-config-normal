@@ -20,4 +20,5 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: x3_arm
+    shield: x3
+

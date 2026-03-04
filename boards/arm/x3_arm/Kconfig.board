@@ -1,0 +1,3 @@
+config BOARD_X3_ARM
+    bool "x3_arm"
+    depends on SOC_NRF52840_QIAA

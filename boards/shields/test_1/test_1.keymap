@@ -7,14 +7,22 @@
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
+    //
+    // ---------------------------------
+    // |     Q     |     W     |     E |
+    // |     A     |     S     |     D |
+    // |     Z     |     X     |     C |
+    //
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-                &kp N1 &kp N2    &kp N3 &kp N4
-                &kp A  &kp B     &kp C  &kp E
+                &kp Q    &kp W    &kp E
+                &kp A    &kp S    &kp D
+                &kp Z    &kp X    &kp C
             >;
         };
     };
 };
+

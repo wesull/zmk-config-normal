@@ -3,10 +3,9 @@
 # for instructions.
 
 file_format: "1"
-id: dylizans
-name: dylizans
-type: board
-arch: arm
+id: test_1
+name: test_1
+type: shield
 
 # Set this to a URL that documents the keyboard.
 url: https://example.com
@@ -16,10 +15,5 @@ url: https://example.com
 features:
   - keys
   - studio  # Remove this line if your keyboard will not support ZMK Studio
-outputs:
-  - usb
-#   - ble
-
-siblings:
-  - dylizans_left
-  - dylizans_right
+requires:
+  - pro_micro

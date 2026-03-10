@@ -4,7 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-/ {
+{
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     keymap {
@@ -12,9 +12,10 @@
 
         default_layer {
             bindings = <
-                &kp Q    &kp W    &kp E
-                &kp A    &kp S    &kp D
-                &kp Z    &kp X    &kp C
+                &kp E    &kp W    &kp Q
+                &kp D    &kp S    &kp A
+                &kp C    &kp X    &kp Z
+                &kp B    &kp N    &kp M
             >;
         };
     };

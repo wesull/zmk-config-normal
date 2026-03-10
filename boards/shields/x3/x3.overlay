@@ -8,6 +8,58 @@
 
 / {
     chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan_composite {
+        compatible = "zmk,kscan-composite";
+        rows = <4>;
+        columns = <3>;
+
+        // Include the matrix driver
+        matrix {
+            kscan = <&kscan1>;
+        };
+
+        // Include the direct GPIO driver...
+        direct {
+            kscan = <&kscan2>;
+            row-offset = <3>; // ...and shift it to not overlap
+        };
+    };
+
+    kscan1: kscan_matrix {
+        compatible = "zmk,kscan-gpio-matrix";
+        // define 3x3 matrix here...
+        col-gpios
+            = <&pro_micro 7 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+            ;
+        row-gpios
+            = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+
+    kscan2: kscan_direct {
+        compatible = "zmk,kscan-gpio-direct";
+        // define 2 direct GPIOs here...
+        input-gpios
+            = <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+    };
+};
+
+
+
+
+
+/*
+/ {
+    chosen {
         zmk,physical-layout = &default_layout;
     };
 
@@ -51,3 +103,4 @@
         >;
     };
 };
+*/

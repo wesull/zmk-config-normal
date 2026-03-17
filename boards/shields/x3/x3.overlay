@@ -64,17 +64,17 @@
 
         // Include the matrix driver
         matrix {
-            kscan = <&default_layout>;
+            kscan = <&kscan1>;
         };
 
         // Include the direct GPIO driver...
         direct {
-            kscan = <&default_layout>;
+            kscan = <&kscan2>;
             row-offset = <3>; // ...and shift it to not overlap
         };
     };
 
-    kscan: kscan_matrix {
+    kscan1: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
@@ -95,7 +95,7 @@
         // define 3x3 matrix here...
     };
 
-    kscan: kscan_direct {
+    kscan2: kscan_direct {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
         input-gpios

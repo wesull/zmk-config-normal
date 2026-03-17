@@ -54,7 +54,7 @@
 */
 / {
     chosen {
-        zmk,kscan0 = &default_layout;
+        zmk,kscan5 = &default_layout;
     };
 
     kscan0: kscan_composite {

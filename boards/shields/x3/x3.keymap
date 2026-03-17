@@ -15,7 +15,8 @@
                 &kp E &kp W &kp Q
                 &kp D &kp S &kp A
                 &kp Z &kp X &kp C
-                &kp G &kp Y &kp K
+                &kp UP_ARROW &kp DOWN_ARROW &kp LEFT_ARROW
+                &kp RIGHT_ARROW &kp &kp MOUSE_BTN1 &kp &kp MOUSE_BTN2
             >;
         };
     };

@@ -64,7 +64,7 @@
 
         // Include the matrix driver
         matrix {
-            kscan = <&kscan1>;
+            kscan = <&kscan>;
         };
 
         // Include the direct GPIO driver...
@@ -104,7 +104,7 @@
             ;
         // define 2 direct GPIOs here...
     };
-    
+
     default_transform: default_transform {
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this

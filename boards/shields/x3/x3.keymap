@@ -12,11 +12,11 @@
 
         default_layer {
             bindings = <
-                &kp E &kp W &kp Q
-                &kp D &kp S &kp A
-                &kp Z &kp X &kp C
-                &kp UP_ARROW &kp DOWN_ARROW &kp LEFT_ARROW
-                &kp RIGHT_ARROW &kp MOUSE_BTN1
+                &kp E, &kp W, &kp Q,
+                &kp D, &kp S, &kp A,
+                &kp Z, &kp X, &kp C,
+                &kp UP_ARROW, &kp DOWN_ARROW, &kp LEFT_ARROW,
+                &kp RIGHT_ARROW, &kp MOUSE_BTN1, &kp MOUSE_BTN2
             >;
         };
     };

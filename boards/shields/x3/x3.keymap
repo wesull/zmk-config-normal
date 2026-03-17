@@ -15,8 +15,7 @@
                 &kp E, &kp W, &kp Q,
                 &kp D, &kp S, &kp A,
                 &kp Z, &kp X, &kp C,
-                &kp L, &kp K, &kp J,
-                &kp P, &kp O, &kp I
+                &kp L, &kp K, &kp J
             >;
         };
     };

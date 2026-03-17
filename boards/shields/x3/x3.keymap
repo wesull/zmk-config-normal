@@ -15,8 +15,8 @@
                 &kp E, &kp W, &kp Q,
                 &kp D, &kp S, &kp A,
                 &kp Z, &kp X, &kp C,
-                &kp UP_ARROW, &kp DOWN_ARROW, &kp LEFT_ARROW,
-                &kp RIGHT_ARROW, &kp T, &kp T
+                &kp L, &kp K, &kp J,
+                &kp P, &kp O, &kp I
             >;
         };
     };

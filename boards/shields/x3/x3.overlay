@@ -69,7 +69,7 @@
 
         // Include the direct GPIO driver...
         direct {
-            kscan = <&kscan2>;
+            kscan = <&kscan>;
             row-offset = <3>; // ...and shift it to not overlap
         };
     };

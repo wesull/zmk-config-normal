@@ -6,7 +6,7 @@
 
 #include "x3-layouts.dtsi"
 
-/ {
+/*/ {
     chosen {
         zmk,physical-layout = &default_layout;
     };
@@ -49,5 +49,59 @@
             RC(1, 0) RC(1, 1) RC(1, 2)
             RC(2, 0) RC(2, 1) RC(2, 2)
         >;
+    };
+};
+*/
+/ {
+    chosen {
+        zmk,kscan = &default_layout;
+    };
+
+    kscan: kscan_composite {
+        compatible = "zmk,kscan-composite";
+        rows = <4>;
+        columns = <3>;
+
+        // Include the matrix driver
+        matrix {
+            kscan = <&kscan1>;
+        };
+
+        // Include the direct GPIO driver...
+        direct {
+            kscan = <&kscan2>;
+            row-offset = <3>; // ...and shift it to not overlap
+        };
+    };
+
+    kscan: kscan_matrix {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        // Replace these comments with the GPIO pins in the matrix.
+        // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
+        col-gpios
+            = <&pro_micro 7 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 9 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+        // define 3x3 matrix here...
+    };
+
+    kscan: kscan_direct {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios
+            = <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
+        // define 2 direct GPIOs here...
     };
 };

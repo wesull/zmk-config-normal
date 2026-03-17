@@ -16,7 +16,7 @@
                 &kp D, &kp S, &kp A,
                 &kp Z, &kp X, &kp C,
                 &kp UP_ARROW, &kp DOWN_ARROW, &kp LEFT_ARROW,
-                &kp RIGHT_ARROW, &kp MOUSE_BTN1, &kp MOUSE_BTN2
+                &kp RIGHT_ARROW, &kp T, &kp T
             >;
         };
     };

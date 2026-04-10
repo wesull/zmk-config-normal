@@ -1,0 +1,5 @@
+config SHIELD_AZYMUT_V3_LEFT
+    def_bool $(shields_list_contains,azymut_v3_left)
+
+config SHIELD_AZYMUT_V3_RIGHT
+    def_bool $(shields_list_contains,azymut_v3_right)

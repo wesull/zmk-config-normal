@@ -20,5 +20,5 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: azymut_v3
+    shield: azymut_v3_left
 

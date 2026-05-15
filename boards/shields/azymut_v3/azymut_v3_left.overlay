@@ -14,8 +14,9 @@
         ;
 };
 */
-//#include "azymut_v3.dtsi"
+#include "azymut_v3.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
+
 
 / {
     chosen {

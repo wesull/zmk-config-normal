@@ -78,7 +78,7 @@
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
         compatible = "zmk,matrix-transform";
-        columns = <3>;
+        columns = <6>;
         rows = <5>;
 
         map = <

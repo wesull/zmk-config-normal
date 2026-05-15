@@ -14,7 +14,7 @@
         ;
 };
 */
-#include "azymut_v3.dtsi"
+//#include "azymut_v3.dtsi"
 
 / {
     chosen {

@@ -7,6 +7,17 @@
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp LEFT_BRACKET>;
+            layers = <1>;
+        };
+    };
+
+    
     keymap {
         compatible = "zmk,keymap";
 
@@ -40,4 +51,4 @@
             >;
         };
     };
-};
+}; 

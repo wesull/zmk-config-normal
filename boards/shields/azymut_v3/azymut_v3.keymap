@@ -9,10 +9,22 @@
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_bracket {
             timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&kp LEFT_BRACKET>;
+            layers = <1>;
+        };
+        combo_paranthesis {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp LEFT_PARENTHESIS>;
+            layers = <1>;
+        };
+        combo_braces {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp LEFT_BRACE>;
             layers = <1>;
         };
     };
@@ -44,11 +56,11 @@
 
          DS2_layer {
             bindings = <
-                &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp T                       //&kp Y       &kp U       &kp I       &kp O       &kp P
-                &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                       //&kp H       &kp J       &kp K       &kp L       &msc SCRL_UP
-                &kp DEL     &kp Z       &kp X       &kp C       &kp V       &kp B                       //&kp N       &kp M       &mkp LCLK   &mkp RCLK   &msc SCRL_DOWN
+                &kp ESC     &kp T       &kp LEFT    &kp RIGHT   &kp E       &kp X                       //&kp Y       &kp U       &kp I       &kp O       &kp P
+                &kp TAB     &kp UP      &kp Q       &kp R       &kp F       &kp M                       //&kp H       &kp J       &kp K       &kp L       &msc SCRL_UP
+                &kp DEL     &kp DOWN    &kp Z       &kp C       &kp Y       &kp B                       //&kp N       &kp M       &mkp LCLK   &mkp RCLK   &msc SCRL_DOWN
                 &trans      &trans      &tog (2)    &kp ENTER   &kp BSPC    &kp SPACE                   //&kp LCTRL   &kp LALT    &kp LGUI    &kp LSHIFT  &trans
-                &kp UP                  &kp RIGHT   &kp LEFT    &kp ENTER   &kp DOWN                                //&kp LEFT_GUI      &kp LALT      &kp LSHFT       &kp LCTRL       &mo (1)
+                &kp W                  &kp D        &kp A       &kp ENTER   &kp S                                //&kp LEFT_GUI      &kp LALT      &kp LSHFT       &kp LCTRL       &mo (1)
             >;
         };
     };

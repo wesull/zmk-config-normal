@@ -22,6 +22,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
+        zmk,analog-input = &anin0;
     };
 
     kscan0: kscan_composite {
@@ -79,6 +80,41 @@
         // define 2 direct GPIOs here...
     };
 
+    anin0: analog_input_0 {
+		compatible = "zmk,analog-input";
+		sampling-hz = <100>;
+		x-ch {
+			io-channels = <&adc 31>; // <--- see ain-map.png for nRF52840
+			mv-mid = <1630>;
+			mv-min-max = <1600>;
+			mv-deadzone = <10>;
+			scale-multiplier = <1>;
+			scale-divisor = <70>;
+			invert;
+			evt-type = <INPUT_EV_REL>;
+			input-code = <INPUT_REL_X>;
+		};
+		y-ch {
+			io-channels = <&adc 29>; // <--- see ain-map.png for nRF52840
+			mv-mid = <1630>;
+			mv-min-max = <1600>;
+			mv-deadzone = <10>;
+			scale-multiplier = <3>;
+			scale-divisor = <4>;
+			invert;
+			evt-type = <INPUT_EV_REL>;
+			input-code = <INPUT_REL_Y>;
+
+			/* enable report mdoe for gamepad axix or knob */
+			/* to only call input_report on quantquantized value is updated */
+			/* NOTE: mouse input does NOT need this */
+			report-on-change-only;
+
+		};
+	};
+
+
+
     default_transform: default_transform {
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
@@ -94,4 +130,6 @@
             RC(4, 0) RC(4, 1) RC(4, 2) RC(4, 3) RC(4, 4) //RC(4, 5)//
         >;
     };
+
+
 };

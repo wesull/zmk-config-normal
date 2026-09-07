@@ -18,7 +18,7 @@ manifest:
       remote: badjeff
       revision: main
 
-    - name: zmk-hid-joystick
+    - name: zmk-hid-io
       remote: badjeff
       revision: main
       

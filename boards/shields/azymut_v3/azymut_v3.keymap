@@ -5,6 +5,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
+
+#define HID_IO_USAGE_FWD_TO_JOYSTICK 0
+#define HID_IO_USAGE_FWD_TO_MOUSE 1
 / {
 
         /* Setup input-processor to intecept input and forward to new usage page  */

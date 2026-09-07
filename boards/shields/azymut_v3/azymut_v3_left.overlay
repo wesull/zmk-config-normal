@@ -20,6 +20,10 @@
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+&adc {
+    status = "okay";
+};
+
 / {
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";

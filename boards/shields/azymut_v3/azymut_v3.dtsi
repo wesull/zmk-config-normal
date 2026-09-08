@@ -51,35 +51,37 @@
 */
 
 
- //HID device
 
+
+ //HID device copilot świruje z kodem
+/*
 / {
-    /* --- ANALOG INPUTS (X/Y) --- */
+   
     analog_x: axis_x {
         compatible = "zmk,analog-input";
-        io-channel = <&adc 0>;   /* kanał ADC dla osi X */
+        io-channel = <&adc 0>;   
         min = <0>;
         max = <4095>;
-        deadzone = <50>;        /* opcjonalnie */
+        deadzone = <50>;        
         invert = <0>;
     };
 
     analog_y: axis_y {
         compatible = "zmk,analog-input";
-        io-channel = <&adc 1>;   /* kanał ADC dla osi Y */
+        io-channel = <&adc 1>;  
         min = <0>;
         max = <4095>;
         deadzone = <50>;
         invert = <0>;
     };
 
-    /* --- INPUT PROCESSOR → HID JOYSTICK --- */
+    
     zip_fwd_to_hid_joystick: zip_forward_fwd_to_hid_joystick {
         compatible = "zmk,input-processor-fwd-to-hid-joystick";
         #input-processor-cells = <0>;
     };
 
-    /* --- LISTENERY DLA OSI --- */
+    
     analog_input_il_x {
         compatible = "zmk,input-listener";
         device = <&analog_x>;
@@ -92,10 +94,11 @@
         input-processors = <&zip_fwd_to_hid_joystick>;
     };
 
-    /* --- HID JOYSTICK DEVICE --- */
+    
     hid_joystick {
         compatible = "zmk,hid-joystick";
-        report-rate = <100>;    /* Hz */
-        axes = <2>;             /* tylko X/Y */
+        report-rate = <100>;   
+        axes = <2>;             
     };
 };
+*/

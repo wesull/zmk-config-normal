@@ -62,7 +62,7 @@
 / {
     chosen {
         zmk,kscan = &kscan0;
-        //zmk,analog-input = &anin0;
+        zmk,analog-input = &anin0;
     };
 
     kscan0: kscan_composite {

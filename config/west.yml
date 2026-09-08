@@ -5,13 +5,17 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
 
+    - name: friggeri
+      url-base: https://github.com/friggeri
+
     - name: badjeff
       url-base: https://github.com/badjeff
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: friggeri
+      revision: feat/hid-joystick
       import: app/west.yml
 
     - name: zmk-analog-input-driver
@@ -24,3 +28,9 @@ manifest:
       
   self:
     path: config
+
+
+#core ZMK
+#   - name: zmk
+#     remote: zmkfirmware
+#     import: app/west.yml

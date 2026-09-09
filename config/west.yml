@@ -14,8 +14,7 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: friggeri
-      revision: feat/hid-joystick
+      remote: zmkfirmware
       import: app/west.yml
 
     - name: zmk-analog-input-driver
@@ -31,6 +30,9 @@ manifest:
 
 
 #core ZMK
-#   - name: zmk
-#     remote: zmkfirmware
-#     import: app/west.yml
+#   
+
+    # - name: zmk
+    #   remote: friggeri
+    #   revision: feat/hid-joystick
+    #   import: app/west.yml

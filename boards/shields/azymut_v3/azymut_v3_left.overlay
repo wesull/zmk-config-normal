@@ -31,6 +31,11 @@
 };
 
 / {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,analog-input = &anin0;
+    };
+
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
 		sampling-hz = <100>;
@@ -63,13 +68,15 @@
 
 		};
 	};
-};
 
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,analog-input = &anin0;
+    analog_input_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&anin0>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
     };
+
+
 
     kscan0: kscan_composite {
         compatible = "zmk,kscan-composite";

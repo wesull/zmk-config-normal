@@ -20,6 +20,7 @@
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+#include <zephyr/usb/class/hid.h>
 //#include <zephyr/device.h>
 //#include <zephyr/drivers/spi.h>
 //#include <zephyr/drivers/gpio.h>

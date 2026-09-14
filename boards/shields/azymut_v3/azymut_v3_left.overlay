@@ -20,21 +20,23 @@
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
-#include <zephyr/usb/class/hid.h>
-//#include <zephyr/device.h>
-//#include <zephyr/drivers/spi.h>
-//#include <zephyr/drivers/gpio.h>
-//#include <zephyr/drivers/adc.h>
-//#include <zephyr/drivers/sensor.h>
+//#include <zephyr/usb/class/hid.h> blad
+//#include <zephyr/device.h>    blad    
+//#include <zephyr/drivers/spi.h>   blad
+//#include <zephyr/drivers/gpio.h>  blad
+//#include <zephyr/drivers/adc.h>   blad
+//#include <zephyr/drivers/sensor.h>   blad
 
-&adc {
-    status = "okay";
-};
+
 
 / {
     chosen {
         zmk,kscan = &kscan0;
         zmk,analog-input = &anin0;
+    };
+
+    &adc {
+    status = "okay";
     };
 
 	anin0: analog_input_0 {

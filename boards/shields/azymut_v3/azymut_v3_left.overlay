@@ -27,7 +27,9 @@
 //#include <zephyr/drivers/adc.h>   blad
 //#include <zephyr/drivers/sensor.h>   blad
 
-
+  &adc {
+    status = "okay";
+};
 
 / {
     chosen {
@@ -35,9 +37,7 @@
         zmk,analog-input = &anin0;
     };
 
-    &adc {
-    status = "okay";
-    };
+  
 
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";

@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: v0.3
+    #revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -14,8 +14,10 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: friggeri
       import: app/west.yml
+      revision: main
+
 
     - name: zmk-analog-input-driver
       remote: badjeff

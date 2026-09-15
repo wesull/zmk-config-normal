@@ -1,3 +1,34 @@
+# manifest:
+#   #defaults:
+#     #revision: v0.3
+#   remotes:
+#     - name: zmkfirmware
+#       url-base: https://github.com/zmkfirmware
+#     - name: wdtamagi
+#       url-base: https://github.com/wdtamagi
+
+#   projects:
+#     - name: zmk
+#       remote: zmkfirmware
+#       import: app/west.yml
+#       revision: main
+
+#     - name: zmk-analog-input-driver
+#       remote: badjeff
+#       revision: main
+
+#     - name: zmk-driver-analog-stick
+#       remote: wdtamagi
+#       revision: main
+      
+#   self:
+#     path: config
+
+
+
+
+
+# fork od badjeffa:
 manifest:
   #defaults:
     #revision: v0.3
